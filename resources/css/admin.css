@@ -1,0 +1,213 @@
+body, html {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    height: 100%;
+
+}
+
+/* .navbar {
+    position: fixed;
+    height: auto;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+} */
+
+.headerNav {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    max-width: 80px;
+    margin-right: 10px;
+}
+
+.nav-link {
+    font-size: 1.2rem;
+}
+
+.sidebarNav {
+    width: 200px;
+    position: fixed;
+    display: block;
+    background-color: red;
+    height: 100vh;
+    left: 0;
+    padding-top: 1rem;
+    background-color: #343a40;
+    z-index: 1; /* Ensure sidebar is above content */
+    top: 75px;
+}
+
+.sidebar {
+
+    
+}
+
+.sidebar .nav-link {
+    font-size: 1rem;
+    color: #ffffff;
+    padding: 0.75rem 1.25rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.sidebar .nav-link.active {
+    color: #007bff;
+    background-color: #23272b;
+}
+
+.sidebar .nav-link i {
+    margin-right: 0.5rem;
+}
+
+.main {
+    margin-top: 56px; /* Height of the fixed navbar */
+
+    padding: 1rem;
+    height: calc(100vh - 56px); /* Full height minus navbar height */
+    overflow-y: scroll; /* Make content scrollable */
+    transition: margin-left 0.3s; /* Add smooth transition for content */
+}
+
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1.1rem;
+}
+
+/* Toast */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1050;
+}
+
+.toast {
+    border-radius: 0.25rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.toast.show {
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.hide {
+    display: none;
+}
+
+.toast {
+    opacity: 0;
+}
+
+/* Login */
+body.auth-bg {
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card.auth-card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    padding: 2rem;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card-title.auth-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.logo {
+    max-width: 150px;
+}
+
+.form-control {
+    font-size: 0.9rem;
+    border-radius: 0.5rem;
+    padding: 1rem 1.5rem;
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.input-group-text {
+    background-color: transparent;
+    border: none;
+}
+
+.input-group-text i {
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.input-group-text input[type="checkbox"] {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-right: 0.25rem;
+}
+
+.input-group-text .form-check-label {
+    font-size: 0.9rem;
+    color: #ffffff;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    background-color: #007bff;
+    border: none;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* MEDIA */
+
+@media only screen and (max-width: 768px) { 
+
+    .sidebarNav {
+        display: none;
+    }
+
+}
