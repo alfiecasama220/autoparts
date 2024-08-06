@@ -17,9 +17,15 @@ class MessagesGlobal
     public function handle(Request $request, Closure $next): Response
     {
         Session::flash('addSuccess', 'Success! Registered Successfully');
+        Session::flash('addItemSuccess', 'Success! Item Added');
+        Session::flash('addCategorySuccess', 'Success! Category Added');
+        Session::flash('addCategoryError', 'Failed! Category Added');
+        Session::flash('addItemError', 'Failed! Item not added');
         Session::flash('LoginSuccess', 'Success! You are now logged in');
         Session::flash('LogoutSuccess', 'Success! You are now logged out');
         Session::flash('loginError', 'Failed! Invalid Email or Password');
+        Session::flash('outOfStock', 'Out of stock');
+        Session::flash('available', 'Available');
         return $next($request);
     }
 }

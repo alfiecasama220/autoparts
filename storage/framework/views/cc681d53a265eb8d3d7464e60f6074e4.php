@@ -31,7 +31,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Inventory Status</h5>
-                            <p class="card-text">Items in stock: 1200</p>
+                            <p class="card-text">Items in stock: <?php echo e($totalStock); ?></p>
                         </div>
                     </div>
                 </div>

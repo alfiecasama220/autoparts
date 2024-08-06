@@ -12,76 +12,13 @@
 
 
 
-        @if (session('error'))
-            <script>
-                window.addEventListener('load', function (event) {
-                    trigger();
-                }) 
-            </script>
-        @elseif(session('success') || $errors->has('email'))
-            <script>
-                window.addEventListener('load', function (event) {
-                    trigger();
-                }) 
-            </script>
-        {{-- @else
-            <script>
-                window.addEventListener('load', function (event) {
-                    trigger();
-                }) 
-            </script> --}}
-        @endif
-
-    {{-- <div class="container">
-        <!-- Your page content here -->
-        <button onclick="window.showToast()" class="btn btn-primary">Show Toast</button>
-    </div> --}}
-    
-    <!-- Toast Container -->
-    <div class="toast-container" aria-live="polite" aria-atomic="true">
-        <div id="toast" class="toast toast-success
-        
-        @if(session('error') || $errors->has('email'))
-            bg-danger
-        @else
-            bg-success
-            
-        @endif
-        
-        " role="alert" aria-live="assertive" aria-atomic="true">
-            <div class="toast-body text-light">
-
-                @if (session('error'))
-                    {{ session('error') }}
-                @elseif(session('success'))
-                    {{ session('success') }}
-                @else
-                    {{ $errors->first('email') }}
-                @endif
-            </div>
-        </div>
-    </div>
+    @include('layout.messages')
 
     @yield('contents')
 
 
 
     @vite('resources\js\app.js')
-
-    <script>
-        function showToast() {
-            const toast = document.getElementById('toast');
-
-            toast.classList.add('show');
-
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 3000);
-        }
-
-        function trigger() {
-            showToast();
-        }
-    </script>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
 </body>
 </html>

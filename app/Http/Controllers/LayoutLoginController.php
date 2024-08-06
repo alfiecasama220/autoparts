@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Session;
 use App\Http\Requests\UserRequest;
 use App\Http\Requests\LoginRequest;
 
+use App\Models\Inventory;
 use App\Models\User;
 
 class LayoutLoginController extends Controller
@@ -22,7 +23,8 @@ class LayoutLoginController extends Controller
     } 
 
     public function dashboard() {
-        return view('admin.index');
+        $totalStock = Inventory::sum('quantity');
+        return view('admin.index' , compact('totalStock'));
     } 
 
     public function registerPost(Request $request, UserRequest $userRequest) {
@@ -50,6 +52,7 @@ class LayoutLoginController extends Controller
         if($validator->passes()) {
             $credentials = $request->only('email', 'password');
             if(Auth::attempt($credentials)) {
+                session(['username'=>Auth::user()->name]);
                 return redirect()->intended(route('dashboard'))->with('success', Session::get('LoginSuccess'));
             }
         } 

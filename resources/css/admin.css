@@ -37,7 +37,8 @@ body, html {
 }
 
 .sidebarNav {
-    width: 200px;
+    max-width: 300px;
+    width: 100%;
     position: fixed;
     display: block;
     background-color: red;
@@ -202,9 +203,49 @@ body.auth-bg {
     background-color: #0056b3;
 }
 
+
+.table {
+    margin-top: 20px;
+}
+
+.table thead th {
+    background-color: #343a40;
+    color: white;
+}
+
+.table tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+/* ADD ITEMS */
+
+.form-group label {
+    font-weight: bold;
+}
+
+.form-control {
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
+
+
 /* MEDIA */
 
-@media only screen and (max-width: 768px) { 
+@media only screen and (max-width: 991px) { 
 
     .sidebarNav {
         display: none;

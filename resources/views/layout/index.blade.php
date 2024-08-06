@@ -18,7 +18,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text bg-dark border-0"><i class="fas fa-envelope text-light"></i></span>
                                 </div>
-                                <input type="email" class="form-control border-0 text-dark" name="email" id="email" placeholder="Enter email">
+                                <input type="email" class="form-control text-dark @if(session('error')) is-invalid border border-danger @endif" name="email" id="email" placeholder="Enter email">
                             </div>
                         </div>
                         <div class="form-group">
@@ -26,7 +26,7 @@
                                 <div class="input-group-prepend">
                                     <span class="input-group-text bg-dark border-0"><i class="fas fa-lock text-light"></i></span>
                                 </div>
-                                <input type="password" name="password" class="form-control border-0 text-dark" id="password" placeholder="Password">
+                                <input type="password" name="password" class="form-control text-dark @if(session('error')) is-invalid border border-danger @endif" id="password" placeholder="Password">
                                 <div class="input-group-append">
                                     <span class="input-group-text bg-dark border-0">
                                         <input type="checkbox" id="showPassword">
