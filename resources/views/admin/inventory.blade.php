@@ -11,6 +11,24 @@
             <a href="{{ route('inventory.create') }}" class="btn btn-primary shadow-sm">Add Item</a>
         </div>
     </div>
+
+    <div class="w-100 d-flex justify-content-end align-content-center">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Category
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a href="{{ route('inventory.index') }}" class="dropdown-item">All</a>
+                @foreach ($categories as $category)
+                <form action="{{ route('inventory.show', $category->id) }}">
+                    <button type="submit" class="dropdown-item">{{ $category->name }}</button>
+                </form>
+                @endforeach
+              
+            </div>
+          </div>
+    </div>
+    
     
     <div class="table-responsive">
         <table class="table table-striped table-hover">

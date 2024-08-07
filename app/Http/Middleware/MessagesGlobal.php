@@ -17,6 +17,7 @@ class MessagesGlobal
     public function handle(Request $request, Closure $next): Response
     {
         Session::flash('addSuccess', 'Success! Registered Successfully');
+        Session::flash('successDelete', 'Success! The data is deleted');
         Session::flash('addItemSuccess', 'Success! Item Added');
         Session::flash('addCategorySuccess', 'Success! Category Added');
         Session::flash('addCategoryError', 'Failed! Category Added');

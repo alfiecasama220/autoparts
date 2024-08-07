@@ -27,7 +27,7 @@ Route::middleware('auth')->group(function () {
 
 Route::resource('/view-details', ViewDetailsController::class);
 Route::get('/see-all-products', [SeeAllController::class, 'seeAll'])->name('seeAll');
-Route::resource('/inventory', InventoryController::class);
+// Route::resource('/inventory', InventoryController::class);
 
 
 // POST REQUEST

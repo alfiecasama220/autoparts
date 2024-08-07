@@ -18,8 +18,9 @@ class InventoryController extends Controller
     public function index()
     {
         // $inventoryItems = Inventory::all();
+        $categories = Category::all();
         $inventoryItems = Inventory::with('category')->paginate(20);
-        return view('admin.inventory', compact('inventoryItems'));
+        return view('admin.inventory', compact('inventoryItems', 'categories'));
     }
 
     /**
@@ -71,11 +72,9 @@ class InventoryController extends Controller
      */
     public function show(string $id)
     {
-        $items = Inventory::findOrFail($id)->where('category_id', $id)->paginate(6);  
-        
         $categories = Category::all();
-        // $items = Inventory::paginate(6)->where('category_id', $id);  
-        return view('client.see-all', compact('items', 'categories'));
+        $inventoryItems = Inventory::with('category')->where('category_id', $id)->paginate(20);
+        return view('admin.inventory', compact('inventoryItems', 'categories'));
     }
 
     /**
@@ -99,6 +98,12 @@ class InventoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $id = Inventory::findOrFail($id);
+
+        if($id) {
+            $id->delete();
+
+            return redirect()->back()->with('success', Session::get('successDelete'));
+        }
     }
 }
