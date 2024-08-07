@@ -18,7 +18,7 @@ class InventoryController extends Controller
     public function index()
     {
         // $inventoryItems = Inventory::all();
-        $inventoryItems = Inventory::with('category')->get();
+        $inventoryItems = Inventory::with('category')->paginate(20);
         return view('admin.inventory', compact('inventoryItems'));
     }
 

@@ -44,6 +44,7 @@
                 @endforeach
             </tbody>
         </table>
+        {{ $inventoryItems->onEachSide(1)->links() }}
     </div>
 </main>
 @endsection
