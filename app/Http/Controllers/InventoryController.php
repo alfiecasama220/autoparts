@@ -23,6 +23,19 @@ class InventoryController extends Controller
         return view('admin.inventory', compact('inventoryItems', 'categories'));
     }
 
+    public function search(Request $request) {
+        $validator = Validator::make($request->all(), [
+            'search' => 'required',
+        ]);
+
+        if($validator->passes()) {
+            $search = $request->search;
+            $inventoryItems = Inventory::where('name', 'LIKE', '%' .$search. '%')->paginate(20);
+            $categories = Category::all();
+            return view('admin.inventory', compact('inventoryItems', 'categories'));
+        }
+    }
+
     /**
      * Show the form for creating a new resource.
      */

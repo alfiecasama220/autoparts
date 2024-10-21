@@ -1,6 +1,6 @@
 @extends('admin.app')
 
-@section('title', 'Add Inventory Item')
+@section('title', 'Add Category')
 
 @section('contents')
 <main role="main" class="col-md-12 ml-sm-auto col-lg-10 main">

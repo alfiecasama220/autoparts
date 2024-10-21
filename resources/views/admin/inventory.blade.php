@@ -12,6 +12,17 @@
         </div>
     </div>
 
+    <form action="{{ route('search') }}" method="GET">
+        @csrf
+        <div class="input-group mb-3 w-25">
+                <input type="text" class="form-control" placeholder="Product Name"  value="{{ request('search') }}" name="search" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+                </div>
+            
+        </div>
+    </form>
+
     <div class="w-100 d-flex justify-content-end align-content-center">
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -27,7 +38,10 @@
               
             </div>
           </div>
+          
     </div>
+
+    
     
     
     <div class="table-responsive">

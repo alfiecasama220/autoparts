@@ -18,7 +18,11 @@ class MessagesGlobal
     {
         Session::flash('addSuccess', 'Success! Registered Successfully');
         Session::flash('successDelete', 'Success! The data is deleted');
+        Session::flash('successUserAdd', 'Success! The User is added');
         Session::flash('addItemSuccess', 'Success! Item Added');
+        Session::flash('addCreditSuccess', 'Success! Credits Added');
+        Session::flash('addPaymentSuccess', 'Success! Payment Added');
+        Session::flash('addBalanceSuccess', 'Success! Balance Added');
         Session::flash('addCategorySuccess', 'Success! Category Added');
         Session::flash('addCategoryError', 'Failed! Category Added');
         Session::flash('addItemError', 'Failed! Item not added');

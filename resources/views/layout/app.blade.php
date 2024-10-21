@@ -6,7 +6,7 @@
     <title>@yield('title')</title>
     {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"> --}}
     <link rel="stylesheet" href="styles.css">
-    @vite('resources\css\app.css');
+    @vite('resources/css/app.css')
 </head>
 <body class="auth-bg">
 

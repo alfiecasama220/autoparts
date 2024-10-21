@@ -6,7 +6,7 @@
     <title><?php echo $__env->yieldContent('title'); ?></title>
     
     <link rel="stylesheet" href="styles.css">
-    <?php echo app('Illuminate\Foundation\Vite')('resources\css\app.css'); ?>;
+    <?php echo app('Illuminate\Foundation\Vite')('resources/css/app.css'); ?>
 </head>
 <body class="auth-bg">
 

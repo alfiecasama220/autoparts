@@ -240,7 +240,155 @@ body.auth-bg {
     border-color: #0056b3;
 }
 
+/* BALANCE */
 
+.balance-card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    text-align: center;
+}
+
+.balance-amount {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.balance-info {
+    font-size: 1rem;
+    color: #6c757d;
+}
+
+.transaction-table th, .transaction-table td {
+    text-align: center;
+}
+
+/* CREDITS CSS */
+
+.form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+.form-group label {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+
+/* PPAY */
+.button-group {
+    display: flex;
+    gap: 20px; /* Space between buttons */
+}
+
+/* General button styles */
+
+.btn {
+    transition: .4s ease-in-out;
+}
+
+.btn:hover {
+    transform: scale(1.01);
+    
+}
+
+
+.btn-pay:hover {
+    background-color: #218838;
+   
+}
+
+.btn-loan:hover {
+    background-color: #0056b3;
+
+}   
+
+
+/* PROFILES */
+
+.profile-card {
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-img {
+    max-width: 150px;
+    max-height: 150px;
+    object-fit: cover;
+    border: 5px solid #007bff;
+}
+
+.profile-card .card-body {
+    padding: 2rem;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 0.5rem;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Activity and Contact Info Card Styles */
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.list-group-item {
+    border: none;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.list-group-item:last-child {
+    border-bottom: 0;
+}
 
 
 /* MEDIA */

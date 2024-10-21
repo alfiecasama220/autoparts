@@ -7,6 +7,10 @@ use App\Http\Controllers\ClientController;
 use App\Http\Controllers\ViewDetailsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\SeeAllController;
+use App\Http\Controllers\BalanceController;
+use App\Http\Controllers\CreditsController;
+use App\Http\Controllers\NextController;
+use App\Http\Controllers\ProfilesController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -22,7 +26,21 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin/logout', [LayoutLoginController::class, 'logout'])->name('logout');
 
     Route::resource('/admin/inventory', InventoryController::class);
+    Route::get('/admin/search', [InventoryController::class, 'search'])->name('search');
     Route::resource('/admin/addCategory', CategoryController::class);
+
+    // BALANCE
+    Route::resource('/admin/balance', BalanceController::class);
+
+    // CREDITS
+    Route::resource('/admin/credits', CreditsController::class);
+    Route::get('/admin/searchCredits', [CreditsController::class, 'searchCredits'])->name('searchCredits');
+
+    // NEXT
+    Route::resource('/admin/next', NextController::class);
+
+    // PROFILES
+    Route::resource('/admin/profile', ProfilesController::class);
 });
 
 Route::resource('/view-details', ViewDetailsController::class);

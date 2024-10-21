@@ -14,9 +14,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo e(route('inventory.index')); ?>">Inventory</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Orders</a>
-            </li>
+            
             <li class="nav-item">
                 <a class="nav-link" href="#">Profile</a>
             </li>
