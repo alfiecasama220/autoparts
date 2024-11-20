@@ -32,30 +32,30 @@
                     Expenses
                 </a>
             </li> --}}
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="bi bi-cart3"></i>
                     POS
                 </a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="bi bi-receipt"></i>
                     Receipt
                 </a>
-            </li>
+            </li> -->
             {{-- <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="bi bi-gear"></i>
                     Settings
                 </a>
             </li> --}}
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="{{ route('profile.index') }}">
                     <i class="bi bi-person"></i>
                     Profile
                 </a>
-            </li>
+            </li> -->
         </ul>
     </div>
 </nav>

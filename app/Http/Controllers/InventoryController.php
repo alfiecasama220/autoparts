@@ -95,7 +95,13 @@ class InventoryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $category = Category::all();
+        // $inventoryItems = Inventory::with('category')->paginate(20);
+        
+        $editItem = Inventory::findOrFail($id);
+
+        // return $editItem->name;
+        return view('admin.inventoryEdit', compact(['editItem', 'category']));
     }
 
     /**

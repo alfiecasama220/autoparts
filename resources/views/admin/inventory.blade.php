@@ -65,7 +65,7 @@
                         <td>{{ $item->quantity }}</td>
                         <td>{{ $item->price }}</td>
                         <td>
-                            <a href="{{ route('inventory.edit', $item->id) }}" class="btn btn-sm btn-outline-warning">Edit</a>
+                            <!-- <a href="{{ route('inventory.edit', $item->id) }}" class="btn btn-sm btn-outline-warning">Edit</a> -->
                             <form action="{{ route('inventory.destroy', $item->id) }}" method="POST" style="display:inline;">
                                 @csrf
                                 @method('DELETE')

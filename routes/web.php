@@ -41,6 +41,7 @@ Route::middleware('auth')->group(function () {
 
     // PROFILES
     Route::resource('/admin/profile', ProfilesController::class);
+
 });
 
 Route::resource('/view-details', ViewDetailsController::class);
