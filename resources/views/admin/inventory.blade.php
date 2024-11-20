@@ -52,6 +52,8 @@
                     <th>Name</th>
                     <th>Category</th>
                     <th>Quantity</th>
+                    <th>Release</th>
+                    <th>Available</th>
                     <th>Price</th>
                     <th>Actions</th>
                 </tr>
@@ -62,7 +64,15 @@
                         <td>{{ $item->id }}</td>
                         <td>{{ $item->name }}</td>
                         <td>{{ $item->category->name }}</td>
-                        <td>{{ $item->quantity }}</td>
+                        <td contenteditable="true">
+                            @if ($item->quantity == 0)
+                                Sold out
+                            @else
+                                {{ $item->quantity }}
+                            @endif
+                        </td>
+                        <td>{{ $item->release }}</td>
+                        <td>{{ $item->available }}</td>
                         <td>{{ $item->price }}</td>
                         <td>
                             <a href="{{ route('inventory.edit', $item->id) }}" class="btn btn-sm btn-outline-warning">Edit</a>

@@ -9,38 +9,33 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo e(route('balance.index')); ?>">
+                <a class="nav-link" href="<?php echo e(route('transaction.index')); ?>">
                     <i class="bi bi-cash"></i>
-                    Balance
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="<?php echo e(route('credits.index')); ?>">
-                    <i class="bi bi-credit-card"></i>
-                    Credit
+                    Transaction
                 </a>
             </li>
             
             
-            <li class="nav-item">
+            
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="bi bi-cart3"></i>
                     POS
                 </a>
-            </li>
-            <li class="nav-item">
+            </li> -->
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="#">
                     <i class="bi bi-receipt"></i>
                     Receipt
                 </a>
-            </li>
+            </li> -->
             
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="<?php echo e(route('profile.index')); ?>">
                     <i class="bi bi-person"></i>
                     Profile
                 </a>
-            </li>
+            </li> -->
         </ul>
     </div>
 </nav>

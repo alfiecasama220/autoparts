@@ -15,9 +15,9 @@
                 <a class="nav-link" href="<?php echo e(route('inventory.index')); ?>">Inventory</a>
             </li>
             
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Profile</a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a class="nav-link" href="<?php echo e(route('logout')); ?>">Logout</a>
             </li>

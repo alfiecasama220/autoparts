@@ -11,6 +11,7 @@ use App\Http\Controllers\BalanceController;
 use App\Http\Controllers\CreditsController;
 use App\Http\Controllers\NextController;
 use App\Http\Controllers\ProfilesController;
+use App\Http\Controllers\TransactionController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -41,6 +42,13 @@ Route::middleware('auth')->group(function () {
 
     // PROFILES
     Route::resource('/admin/profile', ProfilesController::class);
+
+    // TRANSACTION
+    Route::resource('/admin/transaction', TransactionController::class);
+
+    // SHOW ITEM
+    Route::get('/admin/inventory/show-item/{id}', [InventoryController::class, 'showItem'])->name('showItem');
+
 });
 
 Route::resource('/view-details', ViewDetailsController::class);

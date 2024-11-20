@@ -17,9 +17,9 @@
             {{-- <li class="nav-item">
                 <a class="nav-link" href="#">Orders</a>
             </li> --}}
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="#">Profile</a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('logout') }}">Logout</a>
             </li>

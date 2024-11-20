@@ -36,6 +36,12 @@ class InventoryController extends Controller
         }
     }
 
+    public function showItem(string $id) {
+        $categories = Category::all();
+        $inventoryItems = Inventory::with('category')->where('id', $id)->paginate(20);
+        return view('admin.inventory', compact('inventoryItems', 'categories'));
+    }   
+
     /**
      * Show the form for creating a new resource.
      */
@@ -95,7 +101,13 @@ class InventoryController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $category = Category::all();
+        // $inventoryItems = Inventory::with('category')->paginate(20);
+        
+        $editItem = Inventory::findOrFail($id);
+
+        // return $editItem->name;
+        return view('admin.inventoryEdit', compact(['editItem', 'category']));
     }
 
     /**
@@ -103,7 +115,26 @@ class InventoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'name' => 'required',
+            'description' => 'required',
+            'specification' => 'required',
+            'quantity' => 'required',
+            'price' => 'required',
+        ]); 
+
+        $items = Inventory::findOrFail($id);
+
+        if($validator->passes()) {
+            $items->name = $request->name;
+            $items->description = $request->description;
+            $items->specification = $request->specification;
+            $items->quantity = $request->quantity;
+            $items->price = $request->price;
+            $items->save();
+
+            return redirect()->intended(route('inventory.index'))->with('success', 'Data Edited Successfully');
+        }
     }
 
     /**

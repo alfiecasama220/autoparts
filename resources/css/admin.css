@@ -400,3 +400,76 @@ body.auth-bg {
     }
 
 }
+
+/* TRANSACTION */
+
+.content-container {
+    background: #fff; /* Clean white card-like container */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Rounded edges */
+    padding: 20px;
+    width: 100%;
+    max-width: 400px; /* Centered and fixed width */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for elegance */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .label-text {
+    font-weight: 600;
+    font-size: 14px; /* Clean typography */
+    color: #495057;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-check-input {
+    margin-right: 8px;
+  }
+  
+  .form-control {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    padding: 8px 12px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+  }
+  
+  .btn-submit {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-submit:hover {
+    background: #0056b3;
+  }
+  
+  .text-secondary {
+    font-size: 13px;
+    color: #6c757d;
+  }
+  
+  @media (max-width: 768px) {
+    .content-container {
+      padding: 15px;
+      width: 90%;
+    }
+  }
